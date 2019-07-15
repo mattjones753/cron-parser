@@ -1,4 +1,4 @@
-build:
+build: deps
 	go build -o bin/cron-parser cmd/cron-parser/main.go
 
 deps:
@@ -7,7 +7,7 @@ deps:
 
 lint:
 	go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
-	golangci-lint run
+	golangci-lint run -E gofmt
 
 test:
 	go test ./...

@@ -8,6 +8,7 @@ import (
 	"strings"
 )
 
+// Parse takes in a cron expression and returns a Cron struct that represents the execution schedule
 func Parse(input string) (*cron.Cron, error) {
 	components := strings.Split(input, " ")
 	if len(components) < 6 {

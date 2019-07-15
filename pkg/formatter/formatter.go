@@ -7,6 +7,8 @@ import (
 	"strings"
 )
 
+// Format takes a Cron struct representing the execution schedule of a cron job and formats it into a
+// human-readable format
 func Format(cron *cron.Cron) string {
 	result := []string{
 		formatOutputNumberLine("minute", cron.Minutes),

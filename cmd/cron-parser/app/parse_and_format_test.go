@@ -20,7 +20,7 @@ command       ls`
 		assert.NoError(t, err)
 		assert.Equal(t, expectedOutputString, actual)
 	})
-	t.Run("formats cron correctly", func(t *testing.T) {
+	t.Run("returns an error for an invalid cron expression", func(t *testing.T) {
 		cronExpression := "a b c d e f"
 
 		_, err := ParseAndFormat(cronExpression)
